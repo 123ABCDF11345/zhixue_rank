@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no" />
+	<title>登录 | 智学网排名查询系统</title>
+	<link href="{{ url_for('static', filename = 'css/index.css') }}" rel="stylesheet" media="screen" />
+</head>
+<body>
+	<div class="mty-mainbox02 mty-mainbox-pc">
+		<div class="mty-signinbox">
+			<h1 style="text-align:center">智学网排名查询系统</h1>
+			<form role="form" action="/login" method="get">
+				<ul class="mty-inputul">
+					<li>
+						<input type="text" id="username" name="accountId" maxlength="128" tabindex="1" class="mty-input01" placeholder="账号" />
+						<span class="myt-user-icon02"><img src="{{ url_for('static', filename = 'img/mty-user-icon02.png') }}" /></span>
+						<div class="mty-input-errornote" id="usernameErrorId" style="display:none"></div>
+					</li>
+					<li>
+						<div> <input type="password" id="password" name="passwd" size="20" maxlength="128" tabindex="2" class="mty-input01" placeholder="密码" /></div>
+						<span class="myt-user-icon02"><img src="{{ url_for('static', filename = 'img/mty-password-icon.png') }}" /></span>
+						<div class="mty-input-errornote" id="passportErrorId" style="display:none"></div>
+						<div class="rem-password">
+							<div style="color:#ec6a37;"></div>
+						</div>
+					</li>
+				</ul>
+				<div>
+					<input class="mty-btn-pc mty-btn-blue" type="submit" id="submit" value="登录 " />
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+
+</html>
